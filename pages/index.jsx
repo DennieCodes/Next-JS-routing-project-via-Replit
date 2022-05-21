@@ -7,7 +7,7 @@ export default function Home() {
 
 	return (
 		<div className={styles.container}>
-			<EventList items={featuredEvents}/>
+			<EventList items={featuredEvents} />
 		</div>
 	);
 }
