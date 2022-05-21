@@ -1,15 +1,11 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-import styles from "../../../styles/FilteredEventsPage.module.css";
+import styles from '../../../styles/FilteredEventsPage.module.css';
 
 export default function FilteredEventsPage() {
-  const eventsId = useRouter().query;
+	const eventsId = useRouter().query;
 
-  console.log(eventsId);
+	console.log(eventsId);
 
-  return(
-    <div className={styles.container}>
-      Filtered Events Page
-    </div>
-  )
+	return <div className={styles.container}>Filtered Events Page</div>;
 }
