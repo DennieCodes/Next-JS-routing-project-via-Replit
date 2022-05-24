@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import styles from '../../../styles/FilteredEventsPage.module.css';
+import styles from '../../styles/FilteredEventsPage.module.css';
 
 export default function FilteredEventsPage() {
 	const eventsId = useRouter().query;
