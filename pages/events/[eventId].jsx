@@ -5,21 +5,22 @@ import { getEventById } from '../../dummy-data';
 import EventSummary from '../../components/event-detail/event-summary';
 import EventLogistics from '../../components/event-detail/event-logistics';
 import EventContent from '../../components/event-detail/event-content';
+import ErrorAlert from '../../components/ui/error-alert';
 
 import styles from '../../styles/EventsDetailPage.module.css';
 
 export default function EventsDetailPage() {
 	const router = useRouter().query;
-
-	// console.log(`The Router: ${router.eventId}`);
-
 	const eventId = router.eventId;
 	const event = getEventById(eventId);
 
 	if (!event) {
-		return <p>No event found!</p>
+		return (
+			<ErrorAlert>
+				<p>No event found!</p>
+			</ErrorAlert>
+	 	)
 	}
-	// return <Fragment>H</Fragment>
 	return (
 		<Fragment>
 			<EventSummary title={event.title}/>
